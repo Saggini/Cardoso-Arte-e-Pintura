@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f2f2;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  background-image: url('header-cardoso-1920x600.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #e2736e;
+  color: white;
+  padding: 12px 25px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #d05b57;
+}
+
+.section {
+  padding: 50px 20px;
+  background: #fff;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 2em;
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section p {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
+
+.services ul,
+.contato ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+
+
+.service-category {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.service-category:hover {
+  transform: translateY(-5px);
+}
+
+.service-category h3 {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  color: #e2736e;
+  text-align: center;
+}
+
+.service-category ul li {
+  padding: 10px 0;
+  list-style: none;
+  text-align: center;
+}
+
+.service-category ul li:last-child {
+  border-bottom: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+footer {
+  background-color: rgb(97, 10, 10); /* Rosa claro */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.whatsapp-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-fixed:hover {
+  background-color: #1da851;
+}
+
+@media (min-width: 768px) {
+  .buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .button {
+    margin-top: 0;
+  }
+
+  .section p {
+    text-align: left;
+  }
+
+  .service-category {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    padding: 0 10px;
+  }
+}
+.logo {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  display: block;
+}
+.container {
+  max-width: 960px;
+  margin: 20px auto; /* Adiciona margem superior e inferior */
+  padding: 20px; /* Adiciona preenchimento interno */
+  background-color: rgb(97, 10, 10); /* Rosa claro */
+  border-radius: 10px;
+}
+.section.services {
+ 
+  text-align: center; /* Adicionado para centralizar o conteúdo */
+}
+
+.service-category {
+  display: inline-block; /* Permite que a largura seja definida */
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
