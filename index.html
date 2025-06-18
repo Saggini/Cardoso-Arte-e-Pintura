@@ -21,16 +21,9 @@
           Meu compromisso é superar suas expectativas e deixar seu espaço renovado e acolhedor.
         </span>
       </p>
-          <div class="service-card" style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <h3 style="color: #d44b3e;">Rapel com Corda</h3>
-        <p>Técnicas seguras de acesso por corda para pintura, manutenção ou limpeza em áreas elevadas e de difícil acesso.</p>
-      </div>
-
-      <div class="service-card" style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <h3 style="color: #d44b3e;">Serviços de Hidráulica</h3>
-        <p>Atendimento especializado para instalações, manutenções e reparos hidráulicos residenciais ou comerciais.</p>
-      </div>
-
+    </div>
+  </div>
+</section>
 
 <section id="servicos" class="section services">
   <div class="container">
@@ -62,16 +55,6 @@
         <p>Correções rápidas e eficientes para manter seu ambiente sempre impecável.</p>
       </div>
 
-      <div class="service-card" style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <h3 style="color: #d44b3e;">Serviços de Hidráulica</h3>
-        <p>Manutenção e instalações hidráulicas com segurança e eficiência para seu imóvel.</p>
-      </div>
-
-      <div class="service-card" style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <h3 style="color: #d44b3e;">Rapel com Corda</h3>
-        <p>Técnicas de acesso por corda para pintura, limpeza ou manutenção em áreas de difícil acesso.</p>
-      </div>
-
     </div>
   </div>
 </section>
@@ -96,14 +79,14 @@
   </div>
   <div class="form-group">
     <label for="servico">Tipo de Serviço:</label>
-    
-      <option value="Serviços de Hidráulica">Serviços de Hidráulica</option>
-      <option value="Rapel com Corda">Rapel com Corda</option>
-      <option value="Serviços de Hidráulica">Serviços de Hidráulica</option>
-      <option value="Rapel com Corda">Rapel com Corda</option>
-      <option value="Serviços de Hidráulica">Serviços de Hidráulica</option>
-  <option value="Rapel com Corda">Rapel com Corda</option>
-
+    <select id="servico" name="servico" required>
+      <option value="" disabled selected>Selecione o serviço</option>
+      <option value="Pintura Residencial Interna e Externa">Pintura Residencial Interna e Externa</option>
+      <option value="Pintura Comercial Interna e Externa">Pintura Comercial Interna e Externa</option>
+      <option value="Texturização de Paredes">Texturização de Paredes</option>
+      <option value="Pintura Decorativa">Pintura Decorativa</option>
+      <option value="Retoques e Pequenos Reparos">Retoques e Pequenos Reparos</option>
+    </select>
   </div>
   <div class="form-group">
     <label for="observacao">Observação:</label>
@@ -129,7 +112,7 @@
                 `*Serviço:* ${servico}\n` +
                 `*Observação:* ${observacao}`;
 
-    var numero = '555197414862';
+    var numero = '555197414862'; // Substitua pelo número correto com DDD
     var url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
     window.open(url, '_blank');
   });
@@ -137,6 +120,102 @@
 
   </div>
 </section>
+<script>
+document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var servico = document.getElementById('servico').value;
+  var nome = document.getElementById('nome').value;
+  var mensagem = document.getElementById('mensagem').value;
+  var texto = `Olá! Gostaria de solicitar um orçamento.\n\n*Nome:* ${nome}\n*Serviço:* ${servico}\n*Mensagem:* ${mensagem}`;
+  var numero = '5551981031127'; // Substitua pelo número do WhatsApp desejado, com DDD e código do país
+  var url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+  window.open(url, '_blank');
+});
+</script>
+
+<style>
+.orcamento-form {
+  max-width: 500px;
+  margin: 32px auto 0 auto;
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #2d2d2d;
+  margin-bottom: 2px;
+}
+
+.orcamento-form input,
+.orcamento-form select,
+.orcamento-form textarea {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fafbfc;
+  transition: border 0.2s;
+}
+
+.orcamento-form input:focus,
+.orcamento-form select:focus,
+.orcamento-form textarea:focus {
+  border-color: #1e88e5;
+  outline: none;
+}
+
+.button {
+  background: #1e88e5;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.button:hover,
+.button:focus {
+  background: #1565c0;
+}
+
+.button.whatsapp {
+  background: #25d366;
+  color: #fff;
+  margin-top: 0;
+}
+
+.button.whatsapp:hover,
+.button.whatsapp:focus {
+  background: #128c7e;
+}
+
+@media (max-width: 600px) {
+  .orcamento-form {
+    padding: 18px 8px;
+  }
+}
+</style>
+
+
+</main>
 
 <footer class="footer">
   <p>&copy; 2025 Cardoso Arte e Pintura. Todos os direitos reservados.</p>
